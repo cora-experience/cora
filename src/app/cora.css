@@ -1,0 +1,624 @@
+/* ==========================================================================
+   CORA — editorial layer
+   Bianco panna, beige, nero. Tipografia geometrica, molto respiro.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+.site-header {
+  background: rgba(244, 239, 230, 0.92);
+}
+
+.brand--cora {
+  gap: 0;
+  font-family: var(--font-display);
+  font-size: 1.04rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.brand--cora .brand__wordmark {
+  padding-left: 0.3em;
+}
+
+.nav__link {
+  color: var(--ink-muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.nav__link::after {
+  background: var(--ink);
+}
+
+.nav__cta {
+  padding: 0.72rem 1.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Barra di sezione CORA STAYS
+   -------------------------------------------------------------------------- */
+.stays-bar {
+  background: var(--cream-dark);
+  border-bottom: 1px solid var(--line);
+}
+
+.stays-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 50px;
+}
+
+.stays-bar__label {
+  flex-shrink: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.stays-bar__list {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.6vw, 2rem);
+}
+
+.stays-bar__list a {
+  position: relative;
+  display: inline-block;
+  padding-block: 0.25rem;
+  color: var(--ink-muted);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s var(--ease);
+}
+
+.stays-bar__list a:hover,
+.stays-bar__list a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.stays-bar__list a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--ink);
+}
+
+/* --------------------------------------------------------------------------
+   CORA — portal
+   -------------------------------------------------------------------------- */
+.cora-home {
+  min-height: 100svh;
+  padding: clamp(2.5rem, 7vh, 5rem) clamp(1.15rem, 5vw, 3rem)
+    clamp(1.5rem, 4vh, 2.5rem);
+  background: var(--cream);
+}
+
+.cora-home__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(100%, 900px);
+  min-height: calc(100svh - clamp(4rem, 11vh, 7.5rem));
+  margin-inline: auto;
+}
+
+.cora-home__head {
+  text-align: center;
+}
+
+.cora-wordmark {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(2.9rem, 10vw, 5.4rem);
+  font-weight: 500;
+  letter-spacing: 0.36em;
+  line-height: 0.95;
+  text-indent: 0.36em;
+  text-transform: uppercase;
+}
+
+.cora-tagline {
+  margin-top: clamp(0.7rem, 2vw, 1rem);
+  color: var(--ink-muted);
+  font-family: var(--font-body);
+  font-size: clamp(0.62rem, 1.7vw, 0.78rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
+  text-transform: uppercase;
+}
+
+.cora-rule {
+  width: 100%;
+  height: 1px;
+  margin: clamp(2rem, 5vw, 3.4rem) 0 clamp(1.75rem, 4vw, 2.75rem);
+  background: rgba(17, 17, 17, 0.16);
+}
+
+.cora-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 2.75rem) clamp(0.75rem, 3vw, 2rem);
+}
+
+.cora-tile {
+  display: block;
+  min-width: 0;
+  color: var(--ink);
+  text-decoration: none;
+  animation: coraReveal 0.9s var(--ease) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+.cora-tile__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 0.92;
+  background: var(--cream-dark);
+  border-radius: clamp(14px, 2.2vw, 22px);
+}
+
+.cora-tile__media > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+  will-change: transform;
+}
+
+.cora-tile:hover .cora-tile__media > img,
+.cora-tile:focus-visible .cora-tile__media > img {
+  transform: scale(1.035);
+}
+
+.cora-tile--dark .cora-tile__media {
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+}
+
+.cora-tile--dark .cora-tile__media::after {
+  content: "";
+  position: absolute;
+  inset: clamp(8px, 1.4vw, 14px);
+  border: 1px solid rgba(244, 239, 230, 0.16);
+  border-radius: clamp(8px, 1.2vw, 14px);
+  pointer-events: none;
+}
+
+.cora-tile__dark-mark {
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 5.6vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  line-height: 1;
+  text-indent: 0.3em;
+}
+
+.cora-tile--blank .cora-tile__media {
+  background: #f8f4ec;
+  border: 1px solid rgba(17, 17, 17, 0.06);
+}
+
+.cora-tile__title {
+  display: inline-block;
+  position: relative;
+  margin-top: clamp(0.8rem, 1.8vw, 1.1rem);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 2.4vw, 1.35rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.cora-tile__title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -0.2rem;
+  left: 0;
+  height: 1px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease);
+}
+
+.cora-tile:hover .cora-tile__title::after,
+.cora-tile:focus-visible .cora-tile__title::after {
+  transform: scaleX(1);
+}
+
+.cora-tile__subtitle {
+  margin-top: 0.18rem;
+  color: var(--ink-muted);
+  font-size: clamp(0.78rem, 2vw, 0.95rem);
+  line-height: 1.4;
+}
+
+.cora-tile:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.cora-home__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.6rem 1.5rem;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-muted);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cora-home__footer a {
+  transition: color 0.2s var(--ease);
+}
+
+.cora-home__footer a:hover {
+  color: var(--ink);
+}
+
+@keyframes coraReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CORA STAYS — dettagli editoriali
+   -------------------------------------------------------------------------- */
+.hero__wordmark {
+  margin-bottom: clamp(0.8rem, 2vw, 1.1rem);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.hero__wordmark span {
+  color: var(--ink-muted);
+}
+
+.hero__title em,
+.section__title em {
+  color: var(--ink-muted);
+  font-style: normal;
+}
+
+.hero__points li::before {
+  background: var(--sand);
+}
+
+.page-head {
+  background:
+    radial-gradient(60% 120% at 85% 0%, rgba(216, 199, 180, 0.22), transparent 60%),
+    var(--cream);
+}
+
+.eyebrow {
+  color: var(--ink-muted);
+}
+
+.form-note {
+  border-left-color: var(--ink);
+  background: var(--cream-dark);
+}
+
+.form-status--ok,
+.form-status--error {
+  background: var(--cream-dark);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.field input[aria-invalid="true"],
+.field select[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+  background: #f8f1e7;
+  border-color: var(--ink);
+}
+
+.field__error {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   CORA WEARS / LIVING / PROJECTS
+   -------------------------------------------------------------------------- */
+.cora-section {
+  min-height: calc(100svh - var(--header-h));
+  background: var(--cream);
+}
+
+.cora-section__hero {
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.cora-section__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: clamp(2rem, 6vw, 5.5rem);
+  align-items: center;
+}
+
+.cora-section__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--cream-dark);
+  border-radius: clamp(18px, 2.5vw, 28px);
+}
+
+.cora-section__media > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cora-section__media--dark {
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+}
+
+.cora-section__media--dark::after {
+  content: "";
+  position: absolute;
+  inset: clamp(12px, 2vw, 22px);
+  border: 1px solid rgba(244, 239, 230, 0.16);
+  border-radius: clamp(10px, 1.6vw, 18px);
+  pointer-events: none;
+}
+
+.cora-section__dark-mark {
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  line-height: 1;
+  text-indent: 0.3em;
+}
+
+.cora-section__media--blank {
+  background: #f8f4ec;
+  border: 1px solid rgba(17, 17, 17, 0.07);
+}
+
+.cora-section__media--blank::after {
+  content: "";
+  position: absolute;
+  inset: clamp(12px, 2vw, 22px);
+  border: 1px solid rgba(17, 17, 17, 0.07);
+  border-radius: clamp(10px, 1.6vw, 18px);
+  pointer-events: none;
+}
+
+.cora-section__body {
+  max-width: 33rem;
+}
+
+.cora-section__title {
+  max-width: 100%;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 1.4rem + 2.8vw, 3.8rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cora-section__subtitle {
+  margin-top: 0.7rem;
+  color: var(--ink-muted);
+  font-size: clamp(0.85rem, 1.6vw, 1rem);
+  letter-spacing: 0.06em;
+}
+
+.cora-section__text {
+  max-width: 30rem;
+  margin-top: 1.75rem;
+  color: var(--ink-muted);
+  font-size: clamp(0.98rem, 1.4vw, 1.08rem);
+  line-height: 1.75;
+}
+
+.cora-section__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.1rem 1.75rem;
+  margin-top: 2.25rem;
+}
+
+.cora-section .eyebrow {
+  margin-bottom: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.footer__brand--cora {
+  gap: 0;
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.footer__about {
+  max-width: 24rem;
+  color: rgba(244, 239, 230, 0.66);
+}
+
+.footer__title {
+  letter-spacing: 0.16em;
+}
+
+.footer__list a {
+  color: rgba(244, 239, 230, 0.66);
+}
+
+.footer__list a:hover {
+  color: var(--cream);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .cora-section__grid {
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 5vw, 3rem);
+  }
+
+  .cora-section__media {
+    aspect-ratio: 4 / 3.4;
+  }
+
+  .cora-section__body {
+    max-width: 38rem;
+  }
+
+  .nav__link {
+    font-size: 1.18rem;
+    letter-spacing: 0.08em;
+  }
+
+  .nav__cta {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .stays-bar__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+    min-height: 0;
+    padding-block: 0.7rem;
+  }
+
+  .stays-bar__list {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.15rem;
+    scrollbar-width: none;
+  }
+
+  .stays-bar__list::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .cora-home {
+    padding-top: clamp(2.2rem, 8vh, 3.2rem);
+  }
+
+  .cora-home__inner {
+    min-height: calc(100svh - 4.5rem);
+  }
+
+  .cora-wordmark {
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
+  }
+
+  .cora-tagline {
+    letter-spacing: 0.18em;
+    text-indent: 0.18em;
+  }
+
+  .cora-grid {
+    column-gap: 0.65rem;
+  }
+
+  .cora-tile__media {
+    border-radius: 13px;
+  }
+
+  .cora-tile__title {
+    font-size: 0.88rem;
+    letter-spacing: 0.03em;
+  }
+
+  .cora-tile__subtitle {
+    font-size: 0.74rem;
+  }
+
+  .cora-home__footer {
+    margin-top: 2rem;
+    font-size: 0.62rem;
+  }
+
+  .cora-section__title {
+    font-size: clamp(1.9rem, 8vw, 2.7rem);
+  }
+
+  .cora-section__hero {
+    padding-block: clamp(2rem, 6vw, 3rem);
+  }
+
+  .cora-section__actions {
+    gap: 1rem;
+  }
+
+  .cora-section__actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .cora-tile__title {
+    font-size: 0.8rem;
+  }
+
+  .cora-tile__subtitle {
+    font-size: 0.7rem;
+  }
+
+  .cora-wordmark {
+    font-size: 2.5rem;
+  }
+}

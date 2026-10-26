@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://cora-experience.github.io
+Sitemap: https://cora-experience.github.io/cora/sitemap.xml
