@@ -11,7 +11,7 @@ import { Link } from "@/components/link";
 import { StructureCard } from "@/components/structure-card";
 import { copy } from "@/data/copy";
 import { homeFeatures } from "@/data/features";
-import { absoluteUrl, ogImage, siteConfig, socials } from "@/data/site";
+import { absoluteUrl, ogImage, siteConfig } from "@/data/site";
 import { structures } from "@/data/structures";
 import { createPageMetadata } from "@/lib/metadata";
 import { revealDelay } from "@/lib/styles";
@@ -48,7 +48,6 @@ export function StaysPage() {
       addressRegion: "Campania",
       addressCountry: "IT",
     },
-    sameAs: socials.map((social) => social.href),
   };
 
   return (

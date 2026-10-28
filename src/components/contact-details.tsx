@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import { Icon } from "@/components/icons";
 import { copy } from "@/data/copy";
-import { siteConfig, socials } from "@/data/site";
+import { siteConfig } from "@/data/site";
 
 export function ContactDetails() {
   const t = copy.contact.details;
@@ -79,18 +79,7 @@ export function ContactDetails() {
         </li>
       </ul>
 
-      <div className="socials" aria-label={t.socials}>
-        {socials.map((social) => (
-          <a
-            key={social.href}
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={social.label}
-          >
-            <Icon name="instagram" strokeWidth={1.6} />
-          </a>
-        ))}
+      <div className="socials">
         <a href={`mailto:${siteConfig.email}`} aria-label={t.writeEmail}>
           <Icon name="mail" strokeWidth={1.6} />
         </a>

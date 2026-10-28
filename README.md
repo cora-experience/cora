@@ -1,11 +1,9 @@
 # CORA
 
-Sito editoriale di **CORA — A World of Possibilities**: ospitalità, moda, lifestyle e nuovi progetti.
+Sito editoriale di **CORA — Un mondo di possibilità**, dedicato per ora all'ospitalità.
 
-- **CORA STAYS** — l'esperienza Rooms Hub, con strutture, galleria e contatti.
-- **CORA WEARS** — moda, in arrivo.
-- **CORA LIVING** — oggetti e spazi, in arrivo.
-- **CORA PROJECTS** — nuove imprese, in arrivo.
+- **CORA STAYS** — strutture, galleria e contatti (sezione attiva).
+- CORA WEARS, CORA LIVING e CORA PROJECTS sono al momento nascoste: i contenuti restano nel codice, le rotte non vengono generate.
 
 ## Stack
 
@@ -40,7 +38,7 @@ Il sito è pubblicato come project page:
 - `NEXT_PUBLIC_BASE_PATH=/cora`
 - `NEXT_PUBLIC_SITE_URL=https://cora-experience.github.io/cora`
 
-GitHub Pages pubblica il **branch `main` dalla root del repository**. Per questo la build statica viene copiata nella root: `index.html`, `_next/`, `stays/`, `wears/`, `living/`, `projects/`, `404.html`, `.nojekyll`, ecc.
+GitHub Pages pubblica il **branch `main` dalla root del repository**. Per questo la build statica viene copiata nella root: `index.html`, `_next/`, `stays/`, `404.html`, `.nojekyll`, ecc.
 
 Per aggiornare il sito pubblicato:
 
@@ -69,11 +67,8 @@ Il file `.nojekyll` viene creato automaticamente dal post-build e copiato nella 
 ## Struttura
 
 ```text
-src/app/(portal)/page.tsx     Home CORA con le quattro tile
-src/app/(site)/stays/         CORA STAYS (Rooms Hub)
-src/app/(site)/wears/         CORA WEARS
-src/app/(site)/living/        CORA LIVING
-src/app/(site)/projects/      CORA PROJECTS
+src/app/(portal)/page.tsx     Home CORA con le due strutture
+src/app/(site)/stays/         CORA STAYS (strutture, galleria, contatti)
 src/components/               Header, footer, tile, sezioni, form, galleria
 src/data/                     Contenuti, navigazione e configurazione
 src/app/cora.css              Livello editoriale CORA

@@ -12,7 +12,6 @@ export type IconName =
   | "document"
   | "mail"
   | "phone"
-  | "instagram"
   | "close"
   | "chevron-left"
   | "chevron-right";
@@ -77,13 +76,6 @@ const icons: Record<IconName, ReactNode> = {
       d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 12l4 1.5v3A2.5 2.5 0 0 1 17.5 19C10.6 18.6 5.4 13.4 5 6.5A2.5 2.5 0 0 1 6.5 3z"
       strokeLinejoin="round"
     />
-  ),
-  instagram: (
-    <>
-      <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17" cy="7" r="1" fill="currentColor" stroke="none" />
-    </>
   ),
   close: <path d="M6 6l12 12M18 6 6 18" strokeLinecap="round" />,
   "chevron-left": <path d="M15 5l-7 7 7 7" strokeLinecap="round" strokeLinejoin="round" />,

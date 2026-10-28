@@ -17,7 +17,7 @@ export const copy = {
     explore: "Esplora",
     contacts: "Contatti",
     request: "Richiedi disponibilità",
-    photos: "Foto delle strutture e dei profili Instagram",
+    photos: "Foto delle strutture",
     privacy: "Privacy e cookie",
   },
   staysNav: {
@@ -195,7 +195,6 @@ export const copy = {
       address: ["Salerno"],
       hours: "Orari",
       hoursLines: ["9 – 21"],
-      socials: "Social network",
       writeEmail: "Scrivici una email",
     },
     faq: {

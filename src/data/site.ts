@@ -14,24 +14,7 @@ export const siteConfig = {
   phoneHref: "+393337390837",
   whatsapp: "https://wa.me/393337390837",
   address: "Salerno",
-  legal: {
-    cf: "RMNGNN90B08H703U",
-    rea: "SA 515460",
-  },
 } as const;
-
-export const socials = [
-  {
-    label: "Instagram Portarotese",
-    handle: "@roomshub_portarotese",
-    href: "https://www.instagram.com/roomshub_portarotese/",
-  },
-  {
-    label: "Instagram Leucosia",
-    handle: "@roomshub_leucosia",
-    href: "https://www.instagram.com/roomshub_leucosia/",
-  },
-] as const;
 
 export const absoluteUrl = (path = "/") =>
   `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`;

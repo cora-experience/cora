@@ -1,7 +1,7 @@
 import { Link } from "@/components/link";
 import { copy } from "@/data/copy";
 import { staysNavigation } from "@/data/navigation";
-import { siteConfig, socials } from "@/data/site";
+import { siteConfig } from "@/data/site";
 import { structures } from "@/data/structures";
 
 export function SiteFooter() {
@@ -53,15 +53,6 @@ export function SiteFooter() {
             </li>
             <li>{siteConfig.address}</li>
             <li>
-              <a
-                href={socials[0].href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram {socials[0].handle}
-              </a>
-            </li>
-            <li>
               <Link href="/stays/contatti/#richiesta">{t.footer.request}</Link>
             </li>
           </ul>
@@ -69,10 +60,7 @@ export function SiteFooter() {
       </div>
 
       <div className="container footer__bottom">
-        <p>
-          &copy; {year} CORA — C.F. {siteConfig.legal.cf} · REA{" "}
-          {siteConfig.legal.rea}
-        </p>
+        <p>&copy; {year} CORA</p>
         <p>
           {t.footer.photos} ·{" "}
           <Link href="/stays/contatti/">{t.footer.privacy}</Link>
