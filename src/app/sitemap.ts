@@ -10,9 +10,6 @@ const pages = [
   { path: "/stays/strutture/", changeFrequency: "monthly", priority: 0.8 },
   { path: "/stays/galleria/", changeFrequency: "monthly", priority: 0.7 },
   { path: "/stays/contatti/", changeFrequency: "yearly", priority: 0.7 },
-  { path: "/wears/", changeFrequency: "monthly", priority: 0.6 },
-  { path: "/living/", changeFrequency: "monthly", priority: 0.6 },
-  { path: "/projects/", changeFrequency: "monthly", priority: 0.5 },
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

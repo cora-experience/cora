@@ -64,9 +64,15 @@ for (const entry of readdirSync(outDir)) {
 
 for (const entry of generatedEntries) {
   const source = join(outDir, entry);
-  if (!existsSync(source)) continue;
-
   const destination = join(root, entry);
+
+  // Le pagine non più generate (es. sezioni nascoste) non devono restare
+  // nella root pubblicata: verrebbero servite come contenuti fantasma.
+  if (!existsSync(source)) {
+    rmSync(destination, { recursive: true, force: true });
+    continue;
+  }
+
   rmSync(destination, { recursive: true, force: true });
   cpSync(source, destination, { recursive: true });
 }

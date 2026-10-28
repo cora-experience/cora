@@ -286,6 +286,15 @@
   color: var(--ink);
 }
 
+.cora-home__footer nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 @keyframes coraReveal {
   from {
     opacity: 0;

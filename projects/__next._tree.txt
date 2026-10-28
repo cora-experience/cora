@@ -1,8 +1,0 @@
-:HL["/cora/_next/static/chunks/3e82ac7qh-v0g.css","style"]
-:HL["/cora/_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/cora/_next/static/media/78eb2d37ccba2007-s.p.2csanl8cs02r-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/cora/_next/static/media/f87155ad9584d197-s.p.0brp6yyop-3q2.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-3:[["children",{"s":"__PAGE__","h":160}]]
-2:[["children",{"s":"projects","h":96,"c":"$Q3"}]]
-1:[["children",{"s":"(site)","h":96,"c":"$Q2"}]]
-0:{"b":"FmYmHelquIxKWudV5EDpN","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

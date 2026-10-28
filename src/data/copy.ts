@@ -13,7 +13,7 @@ export const copy = {
   },
   footer: {
     about:
-      "A world of possibilities: ospitalità, moda, lifestyle e nuovi progetti. Un unico modo di guardare avanti, con calma e con cura.",
+      "CORA STAYS: case e camere tra Salerno e il Cilento. Due indirizzi, un unico modo di accogliere, con calma e con cura.",
     explore: "Esplora",
     contacts: "Contatti",
     request: "Richiedi disponibilità",
@@ -27,20 +27,13 @@ export const copy = {
     breadcrumb: "Percorso",
   },
   home: {
-    tagline: "A WORLD OF POSSIBILITIES",
-    tiles: {
-      staysAlt:
-        "Una camera con letto matrimoniale e testiera blu a Portarotese, Salerno",
-      livingAlt:
-        "La tavola della colazione in terrazza, dettaglio lifestyle CORA",
-    },
-    contact: "Contatti",
+    tagline: "UN MONDO DI POSSIBILITÀ",
     meta: {
       description:
-        "CORA è un mondo di possibilità: ospitalità, moda, lifestyle e nuovi progetti. Scopri CORA STAYS, CORA WEARS, CORA LIVING e CORA PROJECTS.",
-      ogTitle: "CORA — A World of Possibilities",
+        "CORA STAYS: case e camere a Salerno e nel Cilento. Portarotese e Leucosia, prenotazione diretta e il 15% di sconto dal sito.",
+      ogTitle: "CORA — Case e camere a Salerno e nel Cilento",
       ogDescription:
-        "A world of possibilities: hospitality, fashion, lifestyle and new ventures.",
+        "Due indirizzi tra Salerno e il Cilento: camere e una casa vacanza curate, prenotazione diretta.",
     },
   },
   stays: {

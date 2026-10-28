@@ -37,12 +37,11 @@ export const metadata: Metadata = {
   keywords: [
     "CORA",
     "CORA STAYS",
-    "CORA WEARS",
-    "CORA LIVING",
-    "CORA PROJECTS",
     "camere Salerno",
     "case vacanza Salerno",
     "Cilento",
+    "Portarotese",
+    "Leucosia",
   ],
   alternates: {
     canonical: absoluteUrl("/"),

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
-import coraLiving from "@/assets/images/cora-living.jpg";
-import portaroteseCamera from "@/assets/images/portarotese-camera.jpg";
 import { CoraTile } from "@/components/cora-tile";
 import { JsonLd } from "@/components/json-ld";
 import { Link } from "@/components/link";
 import { copy } from "@/data/copy";
+import { staysNavigation } from "@/data/navigation";
 import { absoluteUrl, siteConfig } from "@/data/site";
+import { structures } from "@/data/structures";
 import { createPageMetadata } from "@/lib/metadata";
 
 export function homeMetadata(): Metadata {
@@ -16,7 +16,7 @@ export function homeMetadata(): Metadata {
     path: "/",
     absoluteTitle: true,
     ogTitle: copy.home.meta.ogTitle,
-    ogDescription: siteConfig.shortDescription,
+    ogDescription: copy.home.meta.ogDescription,
   });
 }
 
@@ -47,42 +47,31 @@ export function HomePage() {
           <div className="cora-rule" aria-hidden="true" />
 
           <div className="cora-grid">
-            <CoraTile
-              title="CORA STAYS"
-              subtitle="Hospitality"
-              href="/stays/"
-              image={portaroteseCamera}
-              alt={copy.home.tiles.staysAlt}
-              delay={0}
-              priority
-            />
-            <CoraTile
-              title="CORA WEARS"
-              subtitle="Fashion"
-              href="/wears/"
-              variant="dark"
-              delay={80}
-            />
-            <CoraTile
-              title="CORA LIVING"
-              subtitle="Lifestyle"
-              href="/living/"
-              image={coraLiving}
-              alt={copy.home.tiles.livingAlt}
-              delay={160}
-            />
-            <CoraTile
-              title="CORA PROJECTS"
-              subtitle="New ventures"
-              href="/projects/"
-              variant="blank"
-              delay={240}
-            />
+            {structures.map((structure, index) => (
+              <CoraTile
+                key={structure.id}
+                title={structure.title}
+                subtitle={structure.cardMeta}
+                href={`/stays/strutture/#${structure.id}`}
+                image={structure.image}
+                alt={structure.alt}
+                delay={index * 80}
+                priority={index === 0}
+              />
+            ))}
           </div>
 
           <footer className="cora-home__footer">
             <span>&copy; {year} CORA</span>
-            <Link href="/stays/contatti/">{copy.home.contact}</Link>
+            <nav aria-label={copy.footer.explore}>
+              <ul>
+                {staysNavigation.slice(1).map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href}>{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </footer>
         </div>
       </main>

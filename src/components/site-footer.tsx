@@ -1,6 +1,6 @@
 import { Link } from "@/components/link";
 import { copy } from "@/data/copy";
-import { navigation } from "@/data/navigation";
+import { staysNavigation } from "@/data/navigation";
 import { siteConfig, socials } from "@/data/site";
 import { structures } from "@/data/structures";
 
@@ -21,7 +21,7 @@ export function SiteFooter() {
         <div>
           <h2 className="footer__title">{t.footer.explore}</h2>
           <ul className="footer__list">
-            {navigation.map((item) => (
+            {staysNavigation.map((item) => (
               <li key={item.href}>
                 <Link href={item.href}>{item.label}</Link>
               </li>

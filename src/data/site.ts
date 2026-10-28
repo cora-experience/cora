@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "CORA",
   title: "CORA — A World of Possibilities",
   description:
-    "CORA è un mondo di possibilità: ospitalità, moda, lifestyle e nuovi progetti. Scopri CORA STAYS, CORA WEARS, CORA LIVING e CORA PROJECTS.",
+    "CORA STAYS: case e camere a Salerno e nel Cilento. Portarotese e Leucosia, prenotazione diretta e il 15% di sconto dal sito.",
   shortDescription:
-    "A world of possibilities: hospitality, fashion, lifestyle and new ventures.",
+    "Due indirizzi tra Salerno e il Cilento: camere e una casa vacanza curate.",
   url: (
     process.env.NEXT_PUBLIC_SITE_URL ??
     "https://cora-experience.github.io/cora"
