@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import { Icon } from "@/components/icons";
 import { copy } from "@/data/copy";
 import { siteConfig, socials } from "@/data/site";
@@ -50,9 +52,12 @@ export function ContactDetails() {
           <div>
             <span className="contact-list__label">{t.where}</span>
             <span className="contact-list__value">
-              {t.address[0]}
-              <br />
-              {t.address[1]}
+              {t.address.map((line, index) => (
+                <Fragment key={line}>
+                  {index > 0 && <br />}
+                  {line}
+                </Fragment>
+              ))}
             </span>
           </div>
         </li>
@@ -63,9 +68,12 @@ export function ContactDetails() {
           <div>
             <span className="contact-list__label">{t.hours}</span>
             <span className="contact-list__value">
-              {t.hoursLines[0]}
-              <br />
-              {t.hoursLines[1]}
+              {t.hoursLines.map((line, index) => (
+                <Fragment key={line}>
+                  {index > 0 && <br />}
+                  {line}
+                </Fragment>
+              ))}
             </span>
           </div>
         </li>

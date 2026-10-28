@@ -9,11 +9,11 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_SITE_URL ??
     "https://cora-experience.github.io/cora"
   ).replace(/\/$/, ""),
-  email: "info@roomshub.it",
-  phone: "+39 333 333 3333",
-  phoneHref: "+393333333333",
-  whatsapp: "https://wa.me/393333333333",
-  address: "Salerno, Campania",
+  email: "spaziocora@gmail.com",
+  phone: "+39 333 739 0837",
+  phoneHref: "+393337390837",
+  whatsapp: "https://wa.me/393337390837",
+  address: "Salerno",
   legal: {
     cf: "RMNGNN90B08H703U",
     rea: "SA 515460",
@@ -21,11 +21,6 @@ export const siteConfig = {
 } as const;
 
 export const socials = [
-  {
-    label: "Instagram CORA STAYS",
-    handle: "@roomshub.it",
-    href: "https://www.instagram.com/roomshub.it/",
-  },
   {
     label: "Instagram Portarotese",
     handle: "@roomshub_portarotese",

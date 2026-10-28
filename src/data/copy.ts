@@ -199,15 +199,9 @@ export const copy = {
       phone: "Telefono e WhatsApp",
       whatsapp: "Scrivici su WhatsApp",
       where: "Dove siamo",
-      address: [
-        "Salerno · Santa Maria di Castellabate",
-        "Cilento",
-      ],
+      address: ["Salerno"],
       hours: "Orari",
-      hoursLines: [
-        "Check-in e check-out da concordare",
-        "Telefono e WhatsApp, rispondiamo appena possibile",
-      ],
+      hoursLines: ["9 – 21"],
       socials: "Social network",
       writeEmail: "Scrivici una email",
     },
