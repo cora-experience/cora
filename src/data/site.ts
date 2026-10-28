@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "CORA",
-  title: "CORA — A World of Possibilities",
+  title: "CORA — Un mondo di possibilità",
   description:
     "CORA STAYS: case e camere a Salerno e nel Cilento. Portarotese e Leucosia, prenotazione diretta e il 15% di sconto dal sito.",
   shortDescription:
